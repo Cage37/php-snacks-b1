@@ -89,6 +89,13 @@ $posts = [
 
 $numbers = [];
 
+// Snack 5
+// Prendere un paragrafo abbastanza lungo, contenente diverse frasi. 
+// Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.
+
+$text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ab harum ea doloremque dolore, excepturi voluptate blanditiis earum molestias mollitia adipisci non corrupti tempora vero, provident, libero ipsum repellat consequatur sunt iusto quaerat? Voluptate in debitis ducimus suscipit totam perspiciatis impedit ab odit laborum repudiandae officiis non pariatur at atque aliquid ad, nisi eligendi. Optio error numquam mollitia at suscipit porro, reprehenderit commodi cupiditate, aliquam ipsa, culpa asperiores! Accusamus numquam consequatur repellat ipsam nihil. Repudiandae alias voluptatum amet! Similique sequi esse quis vitae reiciendis rem. Debitis at aspernatur quas error architecto ab eum doloremque minima, vel earum alias esse hic quisquam consequatur similique illum voluptatem suscipit. Distinctio officia dolorem ducimus libero, rem corporis incidunt aliquid fugiat quia dignissimos fugit, pariatur soluta? Molestiae consequuntur laborum temporibus praesentium expedita possimus! Voluptate ducimus, cum pariatur exercitationem fugiat error nostrum est ea nulla expedita dolore consequatur animi qui harum excepturi nisi distinctio ipsum earum accusantium dolor velit eum possimus. Sint quaerat laboriosam asperiores repellendus nemo doloremque, est sequi unde, soluta vitae nihil modi non laborum fuga! Corrupti ad ab et. Harum tenetur suscipit rem beatae. Laboriosam quasi ad nulla earum natus aperiam molestiae porro harum illo quibusdam? Sed inventore, consectetur quas aut eveniet voluptatem.";
+$textDivide = explode(".", $text);
+
 
 
 ?>
@@ -165,6 +172,18 @@ $numbers = [];
        }
     };
     ?>
+
+    <!-- SNACK 5 -->
+
+    <h1>SNACK 5</h1>
+
+    <?php for($i = 0; $i < count($textDivide); $i++) {
+    ?>
+
+    <p><?= $textDivide[$i] ?></p>
+
+   <?php }
+   ?>
 
 
 
