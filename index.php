@@ -128,6 +128,28 @@ $db = [
 // Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. 
 // Stampare Nome, Cognome e la media dei voti di ogni alunno.
 
+$classroom = [
+    [
+        "name" => "Piero",
+        "surname" => "Rossi",
+        "grades" => [5, 7, 10, 8, 8],
+    ],
+    [
+        "name" => "Gianna",
+        "surname" => "Bianchi",
+        "grades" => [6, 7, 9, 8, 10],
+    ],
+    [
+        "name" => "Jennifer",
+        "surname" => "James",
+        "grades" => [10, 7, 10, 9, 8],
+    ],
+    [
+        "name" => "Simone",
+        "surname" => "Casiraghi",
+        "grades" => [2, 5, 4, 3, 3],
+    ],
+];
 
 ?>
 
@@ -238,16 +260,23 @@ $db = [
        <p style="background-color: green;"><?= $db[array_keys($db)[$i]][$x]["name"] . " " . $db[array_keys($db)[$i]][$x]["lastname"] ?></p>
     <?php };
     ?>
+    <?php }
+   ?>
+    <?php }
+   ?>
 
+   <!-- SNACK 7 -->
+
+   <h1>SNACK 7</h1>
+
+   <?php for($i = 0; $i < count($classroom); $i++) {
+    ?>
+
+    <p><?= $classroom[$i]["name"] . " " . $classroom[$i]["surname"] . " " . array_sum($classroom[$i]["grades"])/count($classroom[$i]["grades"])?></p>
     
 
    <?php }
    ?>
-
-   <?php }
-   ?>
-
-
 
 </body>
 </html>
