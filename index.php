@@ -25,7 +25,19 @@ $calendar = [
         "awayTeam" => "Reyer Venezia",
         "awayPoints" => "67",
     ],
-]
+];
+
+// Snack 2
+// Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
+// che name sia più lungo di 3 caratteri, 
+// che mail contenga un punto e una chiocciola e che age sia un numero. 
+// Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
+
+
+$name = $_GET["name"];
+$mail = $_GET["mail"];
+$age = $_GET["age"];
+$age = intval($age);
 
 ?>
 
@@ -38,6 +50,10 @@ $calendar = [
     <title>PHP-SNACKS-B1</title>
 </head>
 <body>
+
+    <!-- SNACK 1 -->
+
+    <h1>SNACK 1</h1>
     
    <?php for($i = 0; $i < count($calendar); $i++) {
     ?>
@@ -45,6 +61,21 @@ $calendar = [
     <p><?= $calendar[$i]["homeTeam"] . "-" . $calendar[$i]["awayTeam"] . " | " . $calendar[$i]["homePoints"] . "-" . $calendar[$i]["awayPoints"] ?></p>
 
    <?php }
+   ?>
+
+   <!-- SNACK 2 -->
+
+   <h1>SNACK 2</h1>
+
+   <p><?php echo $name ?></p>
+   <p><?php echo $mail ?></p>
+   <p><?php echo $age ?></p>
+
+   <?php if (strlen($name) > 3 && strpos($mail, "@") && strpos($mail, ".") && is_int($age)) {
+        echo "Accesso riuscito";
+   } else {
+        echo "Accesso negato";
+   }
    ?>
 
 </body>
